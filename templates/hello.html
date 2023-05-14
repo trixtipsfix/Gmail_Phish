@@ -1,0 +1,48 @@
+<html>
+  <title>Ez Win!</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-grid.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div class="container">
+    <div class="course-block block rich_text  " id="block-18614805">
+      <div class='container'>
+        <div class='row'>
+          <div class='col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 course-description'>
+            <p style="text-align:center;">
+              <strong>
+                <span style="font-size:30px;">Giveaway!</span>
+              </strong>
+            </p>
+            <hr>
+            <p>
+              <strong>Unlock the thrill of winning with our free prize distribution website!</strong>
+            </p>
+            <p>All you have to do is submit your name and email address below! And don't forget to verify yourself. You will be automatically entered into the giveaway by doing so. Good luck! </p>
+            <p>
+              <strong>Note:</strong>
+              <em>Volunteers play a crucial role in ensuring a fair and authentic prize distribution process. By diligently verifying accounts, you contribute to creating a level playing field for all participants to have a genuine shot at winning their well-deserved prizes.</em>
+            </p>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <form action="" method="post" role="form">
+        {{ form.csrf }}
+        <div class="form-group">
+          <label for="name">
+            <strong>Name: </label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
+          <br />
+          <label for="email">Email:</label>
+          <input type="text" class="form-control" id="email" name="email" placeholder="winner@email.com">
+          <br />
+        </div>
+        <button type="submit" class="btn btn-success">Verify</button>
+      </form>{% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for message in messages %} {% if "Error" not in message[1]: %} <div class="alert alert-info">
+        {{ message[1] }}
+      </div> {% endif %} {% if "Error" in message[1]: %} <div class="alert alert-warning">
+        {{ message[1] }}
+      </div> {% endif %} {% endfor %} {% endif %} {% endwith %}
+    </div>
+</html>

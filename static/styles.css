@@ -1,0 +1,64 @@
+body {
+    background-image: url('prize-background.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    text-shadow: 2px 2px #000;
+}
+
+button {
+    background-color: #f00;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #900;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.signin, .signup {
+    background-color: #fff;
+    color: #000;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+.signin:hover, .signup:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+}
+
+.signin {
+    background-color: #f00;
+    color: #fff;
+}
