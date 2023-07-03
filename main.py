@@ -7,14 +7,16 @@ app.config['SECRET_KEY'] = 'your_secret_key_here'
 
 import db
 
+
 def Notify(msg):
-  account_sid = "[TWILIO_ACCOUNT_SSID HERE]"
+  # You can get your ready made code snippet while setting up your twilio account
+  account_sid = os.environ["TWILIO_ACCOUNT_SID"] # Twilio Account SID Here
   auth_token = os.environ["TWILIO_AUTH_TOKEN"] # Twilio Authentication Token Here
   client = Client(account_sid, auth_token)
   message = client.messages.create(
     body="{}".format(msg),
-    from_="+12707167944",
-    to="+923226383846"
+    from_="+<TWILIO NUMBER>",
+    to="+<YOUR_NUMBER>"
   )
   print(message.sid)
 
