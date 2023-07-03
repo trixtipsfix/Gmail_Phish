@@ -1,2 +1,1 @@
-# prize_dist_xD
-Trust Me Buddy! It's authentic ;)
+An ultimate Gmail phishing page (latest version)  
